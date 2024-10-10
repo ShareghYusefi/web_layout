@@ -19,6 +19,8 @@
         height: 100px;
         background-color: yellow;
         border: 1px solid black;
+        position: relative;
+        top: 10px;
       }
 
       span.c {
@@ -28,9 +30,34 @@
         background-color: yellow;
         border: 1px solid black;
       }
+
+      /* position */
+      /* absolute is relative to the nearest positioned parent */
+      h1 {
+        position: absolute;
+        bottom: 0px;
+        right: 20px;
+      }
+
+      div.relative {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        background-color: lightgray;
+        border: 2px solid green;
+      }
+
+      div.absolute {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+      }
     </style>
   </head>
-  <body>
+  <body style="position: relative">
     <h1>Web Layout</h1>
 
     <p>
@@ -50,5 +77,10 @@
       <strong>Inline-block</strong> elements are those that flow with the text
       and the also <span class="c">maintain their size and shape</span>.
     </p>
+
+    <div class="relative">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      <div class="absolute">This is the div with position: absolute;</div>
+    </div>
   </body>
 </html>
